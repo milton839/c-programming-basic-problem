@@ -1,10 +1,27 @@
 #include <stdio.h>
 #include <string.h>
+
+void while_diye_copy(char str1[], char str2[])
+{
+    int i = 0;
+    while (str2[i] != '\0')
+    {
+        str1[i] = str2[i];
+        i++;
+    }
+    str1[i] = '\0';
+}
 int main()
 {
+
+
     char str1[20];
     char str2[] = "Hello World";
-int i;
+
+    while_diye_copy(str1, str2);
+
+    printf("Copied string using while loop: %s\n", str1);
+    int i;
     for (i = 0; str2[i] != '\0'; i++)
     {
         str1[i] = str2[i];
