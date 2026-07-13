@@ -1,2 +1,3 @@
-Original string: Milton
-Reversed string: notliM
+Original string: Milton Biswas
+Reversed string: sawsiB notliM
+Original string: Hello World
