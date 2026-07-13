@@ -1,3 +1,3 @@
-Original string: Milton Biswas
-Reversed string: sawsiB notliM
-Original string: Hello World
+Copied string: Hello World
+Str2 = Hello World
+Copied string using library function: Hello World
