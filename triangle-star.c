@@ -1,6 +1,6 @@
 #include <stdio.h>
 
-int triangle_star(int n)
+void triangle_star(int n)
 {
     for (int i = 0; i < n; i++)
     {
@@ -10,10 +10,10 @@ int triangle_star(int n)
         }
         printf("\n");
     }
-    return 0;
 }
 
-int reverse_triangle_star(int n){
+void reverse_triangle_star(int n)
+{
     for (int i = 0; i < n; i++)
     {
         for (int j = 0; j < n - i; j++)
@@ -22,7 +22,6 @@ int reverse_triangle_star(int n){
         }
         printf("\n");
     }
-    return 0;
 }
 int main()
 {
