@@ -1,2 +1,2 @@
-After concatenation: Milton Biswas
-After concatenation: Hello World
+Original string: Milton
+Reversed string: notliM
