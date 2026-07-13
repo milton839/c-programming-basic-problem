@@ -30,10 +30,29 @@ void reverse_right_half_pyramid_star(int n){
     }
     
 }
+
+void full_pyramid_star(int n){
+    for (int i = 0; i < n; i++)
+    {
+        //Space printing
+        for (int j = 0; j < n-i-1; j++)
+        {
+            printf(" ");
+        }
+        //Star printing
+        for (int j = 0; j < 2*i+1; j++)
+        {
+            printf("*");
+        }
+        printf("\n");
+    }
+    
+}
 int main()
 {
     int number = 6;
     // right_half_pyramid_star(number);
-    reverse_right_half_pyramid_star(number);
+    // reverse_right_half_pyramid_star(number);
+    full_pyramid_star(number);
     return 0;
 }
