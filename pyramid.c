@@ -18,7 +18,7 @@ void right_half_pyramid_star(int n){
 void reverse_right_half_pyramid_star(int n){
     for (int i = 0; i < n; i++)
     {
-        for (int j = 0; j < i+1; j++)
+        for (int j = 0; j < i; j++)
         {
             printf(" ");
         }
