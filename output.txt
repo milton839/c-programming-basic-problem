@@ -1,2 +1,6 @@
-After swapping: a = 20, b = 10
-After swapping: a = 20, b = 10
+* 
+* * 
+* * * 
+* * * * 
+* * * * * 
+* * * * * * 
