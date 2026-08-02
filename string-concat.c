@@ -8,8 +8,8 @@ void str_concate(char str1[], char str2[]){
     }
     
     while(str2[j] != '\0'){
-        
         str1[i] = str2[j];
+        printf("%d", i);
         i++;
         j++;
         
@@ -27,7 +27,7 @@ int main()
 
     char a[30] = "Hello";
     char b[] = " World";
-    str_concate(a, b);
-    printf("After concatenation: %s\n", a);
+    // str_concate(a, b);
+    // printf("After concatenation: %s\n", a);
     return 0;
 }

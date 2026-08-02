@@ -1,4 +1,1 @@
-Copied string using while loop: Hello World
-Copied string: Hello World
-Str2 = Hello World
-Copied string using library function: Hello World
+After parsing: This is heading - 01

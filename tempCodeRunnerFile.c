@@ -1,1 +1,2 @@
-strlen(str2)
+
+    // printf("After concatenatio
