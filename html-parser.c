@@ -5,28 +5,38 @@ void htmlParser(char html[])
 {
     int in = 0, index = 0;
     int htmlLength = strlen(html);
-    for(int i = 0; i< htmlLength; i++){
-        if(html[i] == '<'){
+    for (int i = 0; i < htmlLength; i++)
+    {
+        if (html[i] == '<')
+        {
             in = 1;
         }
-        else if(html[i] == '>'){
+        else if (html[i] == '>')
+        {
             in = 0;
         }
-        else if(in == 0){
+        else if (in == 0)
+        {
             html[index++] = html[i];
         }
     }
     html[index] = '\0';
 
     // Remove leading and trailing spaces
-    while(html[0] == ' ') {
-        for(int i = 0; i < htmlLength; i++){
-            html[i] = html[i+1];
+    while (html[0] == ' ')
+    {
+        int htmlCurrentLength = strlen(html);
+        for (int i = 0; i < htmlCurrentLength; i++)
+        {
+            html[i] = html[i + 1];
         }
     }
 
-    while(html[strlen(html) - 1] == ' ') {
-        html[strlen(html) - 1] = '\0';
+    int htmlCurrentLength = strlen(html);
+    while (htmlCurrentLength > 0 && html[htmlCurrentLength - 1] == ' ')
+    {
+        html[htmlCurrentLength - 1] = '\0';
+        htmlCurrentLength--;
     }
 }
 int main()
