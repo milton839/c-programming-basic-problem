@@ -18,10 +18,36 @@ int main()
         {
             printf("Invalid Input!\n");
             invalidInputCount++;
+            i--;
             continue;
         }
 
-        printf("Your choice: %d & Computer's choice: %d\n", yourTurn, computerTurn);
+        // Display the choices
+        if(yourTurn == 1)
+        {
+            printf("You chose %d: Rock & ", yourTurn);
+        }
+        else if (yourTurn == 2)
+        {
+            printf("You chose %d: Paper & ", yourTurn);
+        }
+        else
+        {
+            printf("You chose %d: Scissors & ", yourTurn);
+        }
+        if(computerTurn == 1)
+        {
+            printf("Computer chose %d: Rock\n", computerTurn);
+        }
+        else if (computerTurn == 2)
+        {
+            printf("Computer chose %d: Paper\n", computerTurn);
+        }
+        else
+        {
+            printf("Computer chose %d: Scissors\n", computerTurn);
+        }
+
         if (yourTurn == computerTurn)
         {
             printf("It's a tie!\n\n");
@@ -43,6 +69,7 @@ int main()
     printf("Computer wins: %d\n", computerWinCount);
     printf("Ties: %d\n", tieCount);
     printf("Invalid inputs: %d\n", invalidInputCount);
+
     if (yourWinCount > computerWinCount)
     {
         printf("You win!\n");
