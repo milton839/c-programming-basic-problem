@@ -55,22 +55,39 @@ int my_str_length(char *str)
 // }
 
 // Method - 04
-void str_Reverse(char *str)
+// void str_Reverse(char *str)
+// {
+//     char *start = str;
+//     char *end = str + strlen(str) - 1;
+
+//     while (start < end)
+//     {
+//         char temp = *start;
+//         *start = *end;
+//         *end = temp;
+
+//         start++;
+//         end--;
+//     }
+// }
+
+// Method - 05: Two pointer approach(pointer r two pointer er logic same)
+
+void str_Reverse(char str[], int strLength)
 {
-    char *start = str;
-    char *end = str + strlen(str) - 1;
+    int left = 0;
+    int right = strLength - 1; // ayta dia string er last index dhora hoi
 
-    while (start < end)
+    while (left < right)
     {
-        char temp = *start;
-        *start = *end;
-        *end = temp;
+        char temp = str[left];
+        str[left] = str[right];
+        str[right] = temp;
 
-        start++;
-        end--;
+        left++;
+        right--;
     }
 }
-
 int main()
 {
     // Method 1: Using a function to reverse a string in simple way
@@ -102,13 +119,21 @@ int main()
     // printf("Reversed String: %s\n", str);
 
     // Method 4: Pointer way
-    char str[50] = "Hello, World!";
+    // char str[50] = "Hello, World!";
 
-    printf("Original String: %s\n", str);
-    str_Reverse(str);
-    // int strLength = my_str_length(str);
-    // str_Reverse(str, 0, strLength - 1);
+    // printf("Original String: %s\n", str);
+    // str_Reverse(str);
+    // // int strLength = my_str_length(str);
+    // // str_Reverse(str, 0, strLength - 1);
 
-    printf("Reversed String: %s\n", str);
-    return 0;
+    // printf("Reversed String: %s\n", str);
+    // return 0;
+
+    // Method - 05: Two pointer approach
+
+    char str[] = "hello";
+    int strLength = strlen(str);
+    printf("%s\n", str);
+    str_Reverse(str, strLength);
+    printf("%s\n", str);
 }
