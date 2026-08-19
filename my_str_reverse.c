@@ -1,4 +1,6 @@
 #include <stdio.h>
+#include <string.h>
+
 int my_str_length(char *str)
 {
     int length = 0;
@@ -37,27 +39,43 @@ int my_str_length(char *str)
 //     return newString;
 // }
 
-void str_Reverse(char *str, int left, int right)
+// void str_Reverse(char *str, int left, int right)
+// {
+//     if (left >= right)
+//     {
+//         return;
+//     }
+
+//     // Swap characters at left and right indices
+//     char temp = str[left];
+//     str[left] = str[right];
+//     str[right] = temp;
+
+//     str_Reverse(str, left + 1, right - 1);
+// }
+
+// Method - 04
+void str_Reverse(char *str)
 {
-    if (left >= right)
+    char *start = str;
+    char *end = str + strlen(str) - 1;
+
+    while (start < end)
     {
-        return;
+        char temp = *start;
+        *start = *end;
+        *end = temp;
+
+        start++;
+        end--;
     }
-
-    // Swap characters at left and right indices
-    char temp = str[left];
-    str[left] = str[right];
-    str[right] = temp;
-
-    str_Reverse(str, left + 1, right - 1);
 }
-
 
 int main()
 {
-    //Method 1: Using a function to reverse a string in simple way
-    // char str[50] = "Hello, World!";
-    // char newString[50];
+    // Method 1: Using a function to reverse a string in simple way
+    //  char str[50] = "Hello, World!";
+    //  char newString[50];
 
     // int strLength = my_str_length(str);
     // str_Reverse(str, strLength, newString);
@@ -65,9 +83,8 @@ int main()
     // printf("Original String: %s\n", str);
     // printf("Reversed String: %s\n", newString);
 
-
-    //Method 2: Static variable use kore return kora
-    // char str[50] = "Hello, World!";
+    // Method 2: Static variable use kore return kora
+    //  char str[50] = "Hello, World!";
 
     // int strLength = my_str_length(str);
     // char *strReverse = str_Reverse(str, strLength);
@@ -75,12 +92,22 @@ int main()
     // printf("Original String: %s\n", str);
     // printf("Reversed String: %s\n", strReverse);
 
-    //Method 3: Recursive way to reverse a string
+    // Method 3: Recursive way to reverse a string
+    //  char str[50] = "Hello, World!";
+
+    // printf("Original String: %s\n", str);
+    // int strLength = my_str_length(str);
+    // str_Reverse(str, 0, strLength - 1);
+
+    // printf("Reversed String: %s\n", str);
+
+    // Method 4: Pointer way
     char str[50] = "Hello, World!";
 
     printf("Original String: %s\n", str);
-    int strLength = my_str_length(str);
-    str_Reverse(str, 0, strLength - 1);
+    str_Reverse(str);
+    // int strLength = my_str_length(str);
+    // str_Reverse(str, 0, strLength - 1);
 
     printf("Reversed String: %s\n", str);
     return 0;
