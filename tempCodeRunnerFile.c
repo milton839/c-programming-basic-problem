@@ -1,4 +1,1 @@
-if (yourTurn == computerTurn)
-    {
-        printf("It's a tie!\n");
-    }
+    char strReverse = str_Reverse(str, strLength);
