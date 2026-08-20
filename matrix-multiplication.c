@@ -1,7 +1,7 @@
 #include <stdio.h>
 int main()
 {
-    int row, col, row2, col2, sum = 0;
+    int row, col, row2, col2;
     // input for 1st matrix
     printf("Please enter 1st matrix row & column number:");
     scanf("%d %d", &row, &col);
@@ -56,9 +56,10 @@ int main()
         {
             for (int j = 0; j < col2; j++)
             {
+                int sum = 0;
                 for (int k = 0; k < row2; k++)
                 {
-                    sum = sum + a[i][k] * b[k][j];
+                    sum = sum + a[i][k] * b[k][j]; // ekhane i & j hosse 1st matrix e fix value rakhar jonno r k hosse bivinno position e jawar jonno
                 }
                 result[i][j] = sum;
                 sum = 0;
