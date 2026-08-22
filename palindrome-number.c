@@ -11,14 +11,7 @@ bool checkPalindrome(int number)
         reverse = reverse * 10 + number % 10;
         number = number / 10;
     }
-    if (original_number == reverse)
-    {
-        return true;
-    }
-    else
-    {
-        return false;
-    }
+    return original_number == reverse;
 }
 int main()
 {
