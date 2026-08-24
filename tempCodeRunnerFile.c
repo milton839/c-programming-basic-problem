@@ -1,1 +1,1 @@
-= fgetc(fp))
+str
